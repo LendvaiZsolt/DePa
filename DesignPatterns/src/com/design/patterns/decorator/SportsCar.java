@@ -9,12 +9,12 @@ public class SportsCar extends CarDecorator {
     @Override
     public void assemble(String serialNumber) {
         super.assemble(serialNumber);
-        System.out.println("Adding sport motor");
+        System.out.println("Sport matchboxhoz sport motor jár.");
     }
 
     @Override
     public void honk() {
-        System.out.println("Sport cars do not honk!");
+        System.out.println("Sport matchboxra nem szükséges duda, hiszen ő gyors.");
     }
 
 }

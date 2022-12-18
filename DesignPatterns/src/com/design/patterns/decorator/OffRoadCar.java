@@ -9,13 +9,13 @@ public class OffRoadCar extends CarDecorator {
     @Override
     public void assemble(String serialNumber) {
         super.assemble(serialNumber);
-        System.out.println("Adding offroad suspensions");
+        System.out.println("Offroad felfüggesztéssel adjuk a SUV autót.");
     }
 
     @Override
     public void honk() {
         super.honk();
-        System.out.println("Flashes the headlights");
+        System.out.println("Villogó első fényszórók.");
     }
 
 }

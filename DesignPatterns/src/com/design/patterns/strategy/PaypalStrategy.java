@@ -15,7 +15,7 @@ public class PaypalStrategy implements PaymentStrategy {
     @Override
     public boolean pay(int paymentAmount) {
         if (isAuthenticated()) {
-            System.out.println("Payment of " + paymentAmount + " euro is completed by PayPal");
+            System.out.println("A kifizetés " + paymentAmount + " euro összegben teljesült PayPal-al");
             return true;
         }
         return false;
@@ -23,17 +23,17 @@ public class PaypalStrategy implements PaymentStrategy {
 
     private boolean isAuthenticated() {
         String response = sendAuthenticationRequest(this.email, this.password);
-        System.out.println("Checking authentication response...");
+        System.out.println("Hitelesítjük adatait...");
         if (response.equals("true")) {
-            System.out.println("Authenticated");
+            System.out.println("Hitelesítve.");
             return true;
         }
-        System.out.println("Failed authentication");
+        System.out.println("Nem hiteles adatok.");
         return false;
     }
 
     private String sendAuthenticationRequest(String email, String password) {
-        System.out.println("Sending authentication request...");
+        System.out.println("Hitelesítési adatok elküldve...");
         Random r = new Random();
         if (r.nextInt(10) % 2 == 0) {
             return "true";

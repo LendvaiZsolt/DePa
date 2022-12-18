@@ -9,7 +9,8 @@ public class EagerSingletonConfig implements Config {
 
     // private constructor
     private EagerSingletonConfig() {
-        configString = "This is the config";
+        configString = "Kosár0001";
+        //ide egy futó sorszámot is tehetnénk, a config értéke akkor sem változna a kód futása során, mert a példány azonnal létrejön és static;
     }
 
     // method for accessing the single object
